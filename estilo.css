@@ -77,10 +77,13 @@ main {
     padding-top: 32px;
 }
 
-.sobre h2 {
+.sobre h2,
+.grid h2 {
     font-size: 48px;
+    margin-bottom: 32px;
 
 }
+
 
 .sobre > div {
     display: flex;
@@ -98,4 +101,64 @@ main {
     justify-content: end;
     gap: 8px;
 }
+
+.grid {
+    padding: 64px 0;
+
+}
+
+.grid > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,140px);
+    gap: 32px 24px;
+}
+
+.grid__item{
+    display: flex;
+}
+
+.grid__item p:first-of-type {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+ .grid__item:nth-child(1) {
+    flex-direction: column;
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+
+ }
+
+ .grid__item img {
+    border-radius: 16px;
+ }
+
+ .grid__item:nht-child(1) img {
+     margin-bottom: 12px;
+ }
+
+ .contato {
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px;
+
+ }
+ .contato h3 {
+    font-size: 32px;
+ }
+
+ .contato p {
+    font-size: 18px;
+ }
+
+ .contato form imput[type="text"] {
+    border: none;
+    border-radius:8px;
+    font-size: 24px;
+ }
+
 
